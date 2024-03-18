@@ -13,5 +13,10 @@ def main():
   else:
     change = money - item_price
     print(f'Here is your {user_selection} and your change ${change}')
+    result = input("Would you like anything else: Yes/No ")
+  if result == "Yes":
+    main()
+  else:
+    print("Thank you for coming to the vending machine!")  
 main()
 
