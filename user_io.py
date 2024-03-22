@@ -3,7 +3,11 @@ import inventory as inv
 def get_money():
   try:
     money = float(input("Please enter the amount of money you have: $"))
-    return money
+    if money <= 0:
+      print("Money must be greater than 0.")
+      return get_money()
+    else:
+      return money
   except Exception as e:
     print("Error")
     return get_money()
